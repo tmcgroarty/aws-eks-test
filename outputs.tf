@@ -3,16 +3,16 @@ output "cluster_name" {
 }
 
 output "region" {
-  value = var.aws_region
+  value = var.region
 }
 
 output "vpc_id" {
-  value = aws_vpc.eks_vpc.id
+  value = aws_vpc.main.id
 }
 
 output "subnet_ids" {
   value = [
-    aws_subnet.public_a.id,
-    aws_subnet.public_b.id
+    aws_subnet.public_1.id,
+    aws_subnet.public_2.id
   ]
 }
