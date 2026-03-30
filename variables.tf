@@ -1,11 +1,11 @@
-variable "region" {
-  type    = string
-  default = "us-east-2"
-}
-
 variable "cluster_name" {
   type    = string
   default = "my-eks-lab"
+}
+
+variable "kubernetes_version" {
+  type    = string
+  default = "1.34"
 }
 
 variable "vpc_cidr" {
@@ -26,4 +26,14 @@ variable "public_subnet_2_cidr" {
 variable "instance_types" {
   type    = list(string)
   default = ["t3.medium"]
+}
+
+variable "eks_cluster_role_arn" {
+  type    = string
+  default = "arn:aws:iam::737361577962:role/my-eks-lab-cluster-role"
+}
+
+variable "eks_node_role_arn" {
+  type    = string
+  default = "arn:aws:iam::737361577962:role/my-eks-lab-node-role"
 }
