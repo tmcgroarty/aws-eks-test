@@ -16,3 +16,11 @@ output "subnet_ids" {
     aws_subnet.public_2.id
   ]
 }
+
+output "cluster_endpoint" {
+  value = aws_eks_cluster.eks.endpoint
+}
+
+output "node_group_name" {
+  value = aws_eks_node_group.nodes.node_group_name
+}
